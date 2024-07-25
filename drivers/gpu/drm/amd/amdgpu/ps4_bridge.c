@@ -553,7 +553,7 @@ static void ps4_bridge_enable(struct drm_bridge *bridge)
 		cq_writereg(&mn_bridge->cq, 0x70fe, 0x12);
 		cq_writereg(&mn_bridge->cq, 0x70c3, 0x10);
 
-		if(pdev->device == PCI_DEVICE_ID_CUH_12XX) {
+		if(pdev->device == PCI_DEVICE_ID_CUH_2XXX) {
 			/* newer ps4 phats need here 0x03 idk why. */
 			cq_writereg(&mn_bridge->cq, 0x10c5, 0x03);
 		} else {
